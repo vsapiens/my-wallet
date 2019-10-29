@@ -1,0 +1,24 @@
+{
+  "name": "my-wallet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vsapiens/my-wallet.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vsapiens/my-wallet/issues"
+  },
+  "homepage": "https://github.com/vsapiens/my-wallet#readme",
+  "dependencies": {
+    "google-spreadsheet": "^2.0.8",
+    "googleapis": "^39.2.0",
+    "request": "^2.88.0"
+  }
+}
