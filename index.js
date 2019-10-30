@@ -5,6 +5,7 @@ const Alexa = require('ask-sdk-core');
 const GoogleSpreadsheet = require("google-spreadsheet");
 const { promisify } = require("util");
 const creds = require("./credentials.json");
+var sheet;
 
 var rows = '0';
 var title = 'none';
@@ -15,7 +16,7 @@ async function accessSpreadsheat() {
   );
   await promisify(doc.useServiceAccountAuth)(creds);
   const info = await promisify(doc.getInfo)();
-  const sheet = info.worksheets[0];
+  sheet = info.worksheets[0];
   
   title = sheet.title;
   rows = sheet.rowCount;
@@ -69,38 +70,87 @@ const LaunchRequestHandler = {
             .getResponse();
     }
 };
+
+
+//Funcion para Ingresar valores a la cartera
+function IngresoSpeakOut(cant,tipo,fecha,descr){
+    var outPut = "";
+    //Condicional para checar si no hay fecah dada por el usuario, pone la del día que se mando el comando
+    if(!fecha){
+        fecha = new Date().toJSON().slice(0,10);
+    }
+       if(cant && tipo){
+           //Si se agrego descripcion de quien viene la cantidad ingresada
+            if(descr){
+                //Si se usan palabras derivadas del verbo Prestar
+                if(tipo === "presto" || tipo === "prestó"){
+                    if(cant > 1){
+                        outPut = "Préstamo de " + descr + " por " + cant + " pesos, guardado exitosamente.";
+                    } else {
+                        outPut = "Préstamo de " + descr + " por " + cant + " peso, guardado exitosamente.";
+                    }
+                }else {
+                    if(cant > 1){
+                        outPut = tipo + " de " + descr + " por " + cant + " pesos, guardado exitosamente.";
+                    } else {
+                        outPut = tipo + " de " + descr + " por " + cant + " peso, guardado exitosamente.";
+                    }
+                }
+                IngresoBaseDeDatos(tipo,cant,fecha,descr);
+            } else {
+                if(cant > 1){
+                    outPut = tipo + " por " + cant + " pesos, guardado exitosamente."
+                } else{
+                    outPut = tipo + " por " + cant + " peso, guardado exitosamente."
+                }
+                IngresoBaseDeDatos(tipo,cant,fecha,descr);
+            }
+        }
+        if(cant){
+            if(cant > 1){
+                outPut = "Ingreso de " + cant + " pesos, guardado exitosamente.";
+            } else {
+                outPut = "Ingreso de " + cant + " peso, guardado exitosamente.";
+            }
+            IngresoBaseDeDatos(tipo,cant,fecha,descr);
+        }
+    
+    return outPut;
+}
+
+//Funcion para agregar los valores de ingreso a la base de datos
+async function IngresoBaseDeDatos(tipo,cant,fecha,descr){
+    const row = {
+            Flujo: "In",
+            Tipo: tipo,
+            Cantidad: cant,
+            Fechainput: fecha,
+            Info: descr
+    }
+  await promisify(sheet.addRow)(row);
+}
+
 const IngresoIntentHandler = {
     canHandle(handlerInput) {
         return Alexa.getRequestType(handlerInput.requestEnvelope) === 'IntentRequest'
             && Alexa.getIntentName(handlerInput.requestEnvelope) === 'IngresoIntent';
     },
     handle(handlerInput) {
-        const slots = handlerInput.requestEnvelope.request.intent.slots;
-        //const name = slots['name'].value;
+        const slots = handlerInput.requestEnvelope.request.intent.slots;    //Checar los slots del intent
+        //Lee las variables
         const Cantidad = slots['Cantidad'].value;
         const Tipo = slots['Tipo'].value;
         const FechaInput = slots['FechaInput'].value;
-        const Flujo = slots['Flujo'].value;
         const Descripcion = slots['Descripcion'].value;
-        let speakOutput = "Error , no te he podido escuchar"
-        if(Cantidad && Tipo){
-            if(Descripcion){
-                if(Tipo === "presto" || Tipo === "prestó"){
-                    
-                    speakOutput = "Préstamo de " + Descripcion + " por " + Cantidad + " pesos, guardado exitosamente."
-
-                } else {
-                    speakOutput = Tipo + " de " + Descripcion + " por " + Cantidad + " pesos, guardado exitosamente."
-                }
-            } else {
-                speakOutput = Tipo + " por " + Cantidad + " pesos, guardado exitosamente."
-            }
-        }
-
+        let speakOutput = "Error , no te he entendido";
+        //Llama la funcion en donde se define lo que dira Alexa y el guardado en la base de datos
+        speakOutput = IngresoSpeakOut(Cantidad,Tipo,FechaInput,Descripcion);
+        /* Para probar que se tenga acceso al google sheet
         speakOutput = "Titulo es " + title + " Numero de renglones es " + rows;
+        */
         return handlerInput.responseBuilder
             .speak(speakOutput)
-            //.reprompt('add a reprompt if you want to keep the session open for the user to respond')
+            .reprompt('Quieres decir otro comando?')
             .getResponse();
     }
 };
