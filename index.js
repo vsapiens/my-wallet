@@ -37,6 +37,7 @@ async function getBalance() {
     `Tu balance total es ${ingresos} en ingresos y tienes gastos de ${gastos}`
   );
 }
+
 async function getBalanceMonth(dateinput) {
   ingresos = 0;
   gastos = 0;
@@ -141,45 +142,8 @@ async function getBalanceWeek(dateinput) {
     `Tu balance del día es ${ingresos} en ingresos y tienes gastos de ${gastos}`
   );
 }
-//Input Format: '2019-W43'
-async function willSurviveWeek(dateinput) {
-  ingresos = 0;
-  gastos = 0;
 
-  const rows = await promisify(sheet[0].getRows)({
-    offset: 1
-  });
-
-  weekNum = Number(dateinput.substring(6, 8));
-  year = Number(dateinput.substring(0, 4));
-
-  dateLower = getSundayFromWeekNum(weekNum, year);
-  dateUpper = getSaturdayFromWeekNum(weekNum, year);
-
-  //console.log(`${year} ${weekNum}`);
-
-  rows.forEach(row => {
-    fechaInput = row.fechainput;
-    day = Number(fechaInput.substring(8, 10));
-    month = Number(fechaInput.substring(5, 7));
-
-    date = new Date(year, month - 1, day);
-    //console.log(`${date}`);
-
-    if (dateLower <= date && dateUpper >= date) {
-      if (row.flujo === "In") {
-        ingresos += Number(row.cantidad);
-      } else if (row.flujo === "Out") {
-        gastos += Number(row.cantidad);
-      }
-    }
-  });
-  console.log(
-    `Tu balance del día es ${ingresos} en ingresos y tienes gastos de ${gastos}`
-  );
-}
-
-async function accessSpreadsheat() {
+async function accessSpreadsheet() {
   const doc = new GoogleSpreadsheet(
     "1KClrowuR8RJmGYknoXtBM_BjpMtAe2sh7DI2opZYrYg"
   );
@@ -190,9 +154,9 @@ async function accessSpreadsheat() {
     sheet.push(worksheet);
   });
 
-  var date2 = getSundayFromWeekNum(44, 2019);
-  var date3 = getSaturdayFromWeekNum(44, 2019);
-
+  //var date2 = getSundayFromWeekNum(44, 2019);
+  //var date3 = getSaturdayFromWeekNum(44, 2019);
+  /*
   const date = [
     {
       day: date2.getDate(),
@@ -205,11 +169,12 @@ async function accessSpreadsheat() {
       year: date3.getFullYear()
     }
   ];
-
-  console.log(`${date2}`);
+*/
+  //console.log(`${date2}`);
   //console.log(`${date[0].day}-${date[0].month}-${date[0].month}`);
   //console.log(`${date[1].day}-${date[1].month}-${date[1].month}`);
   getBalance();
+  console.log(`${gastos}`);
   //getBalanceMonth(date);
   //getBalanceDay(date);
   //getBalanceWeek("2019-W43");
@@ -270,4 +235,4 @@ async function accessSpreadsheat() {
   */
 }
 
-accessSpreadsheat();
+accessSpreadsheet();
