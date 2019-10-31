@@ -23,7 +23,7 @@ async function getBalance() {
   ingresos = 0;
   gastos = 0;
 
-  const rows = await promisify(sheet_0.getRows)({
+  const rows = await promisify(sheet[0].getRows)({
     offset: 1
   });
   rows.forEach(row => {
@@ -40,7 +40,7 @@ async function getBalance() {
 async function getBalanceMonth(dateinput) {
   ingresos = 0;
   gastos = 0;
-  const rows = await promisify(sheet_0.getRows)({
+  const rows = await promisify(sheet[0].getRows)({
     offset: 1
   });
   //2019-10
@@ -64,7 +64,7 @@ async function getBalanceMonth(dateinput) {
 async function getBalanceDay(dateinput) {
   ingresos = 0;
   gastos = 0;
-  const rows = await promisify(sheet_0.getRows)({
+  const rows = await promisify(sheet[0].getRows)({
     offset: 1
   });
   //2019-10
@@ -109,7 +109,7 @@ async function getBalanceWeek(dateinput) {
   ingresos = 0;
   gastos = 0;
 
-  const rows = await promisify(sheet_0.getRows)({
+  const rows = await promisify(sheet[0].getRows)({
     offset: 1
   });
 
@@ -146,7 +146,7 @@ async function willSurviveWeek(dateinput) {
   ingresos = 0;
   gastos = 0;
 
-  const rows = await promisify(sheet_0.getRows)({
+  const rows = await promisify(sheet[0].getRows)({
     offset: 1
   });
 
@@ -186,7 +186,9 @@ async function accessSpreadsheat() {
   await promisify(doc.useServiceAccountAuth)(creds);
   const info = await promisify(doc.getInfo)();
 
-  sheet_0 = info.worksheets[0];
+  info.worksheets.forEach(worksheet => {
+    sheet.push(worksheet);
+  });
 
   var date2 = getSundayFromWeekNum(44, 2019);
   var date3 = getSaturdayFromWeekNum(44, 2019);
@@ -207,7 +209,7 @@ async function accessSpreadsheat() {
   console.log(`${date2}`);
   //console.log(`${date[0].day}-${date[0].month}-${date[0].month}`);
   //console.log(`${date[1].day}-${date[1].month}-${date[1].month}`);
-  //getBalance();
+  getBalance();
   //getBalanceMonth(date);
   //getBalanceDay(date);
   //getBalanceWeek("2019-W43");
