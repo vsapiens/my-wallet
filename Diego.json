@@ -1,0 +1,189 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi cartera",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "IngresoIntent",
+          "slots": [
+            {
+              "name": "Cantidad",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "Tipo",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "FechaInput",
+              "type": "AMAZON.DATE"
+            },
+            {
+              "name": "Descripcion",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "Moneda",
+              "type": "AMAZON.Actor"
+            },
+            {
+              "name": "Agregar",
+              "type": "CARTERA_ANADIR"
+            }
+          ],
+          "samples": [
+            "{Agregar} {Cantidad}",
+            "{Agregar} {Cantidad} {Moneda}",
+            "{FechaInput} {Descripcion} me {Tipo} {Cantidad}",
+            "{FechaInput} {Descripcion} me {Tipo} {Cantidad} {Moneda}",
+            "Meter {Cantidad}",
+            "Meter {Cantidad} {Moneda}",
+            "Mete {Cantidad} {Moneda}",
+            "Mete {Cantidad}",
+            "Registra {Cantidad} {Moneda}",
+            "Registra {Cantidad}",
+            "Registrar {Cantidad} {Moneda}",
+            "Registrar {Cantidad}",
+            "Sueldo {Cantidad} {Moneda}",
+            "Sueldo {Cantidad}",
+            "Me {Tipo} {Cantidad} {Moneda} {FechaInput}",
+            "Me {Tipo} {Cantidad}",
+            "Me {Tipo} {Cantidad} {Moneda}",
+            "Depositar {Cantidad} porfavor",
+            "Depositar {Cantidad} {Moneda} porfavor",
+            "Depositar {Cantidad}",
+            "Depositar {Cantidad} {Moneda}",
+            "Agregamé {Cantidad} {Moneda} porfavor",
+            "Agregamé {Cantidad} porfavor",
+            "Agregar {Cantidad} {Moneda} porfavor",
+            "Agregar {Cantidad} porfavor",
+            "Agregamé {Cantidad} {Moneda}",
+            "Agregamé {Cantidad}",
+            "Agregar {Cantidad} {Moneda}",
+            "Agregar {Cantidad}",
+            "{FechaInput} mi {Descripcion} me {Tipo} {Cantidad} {Moneda}",
+            "{FechaInput} mi {Descripcion} me {Tipo} {Cantidad}",
+            "{Descripcion} me {Tipo} {Cantidad}  {FechaInput} ",
+            "{Descripcion} me {Tipo} {Cantidad} {Moneda} {FechaInput} ",
+            "{Descripcion} me {Tipo} {FechaInput} {Cantidad} {Moneda}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "CARTERA_ANADIR",
+          "values": [
+            {
+              "name": {
+                "value": "Añadir",
+                "synonyms": [
+                  "Insertale",
+                  "Ingresale",
+                  "Metele",
+                  "Añadele",
+                  "Agregale",
+                  "Sumale",
+                  "Ponle",
+                  "Sumar",
+                  "Meter",
+                  "Poner",
+                  "Añade",
+                  "Ingresar",
+                  "Insertar",
+                  "Agregar"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "IngresoIntent",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.659075743101"
+          },
+          "slots": [
+            {
+              "name": "Cantidad",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Tipo",
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "FechaInput",
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Descripcion",
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Moneda",
+              "type": "AMAZON.Actor",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "Agregar",
+              "type": "CARTERA_ANADIR",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.659075743101",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Seguro?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Confirmas lo que me dijiste puñetas con {Cantidad} pesos"
+          }
+        ]
+      }
+    ]
+  }
+}

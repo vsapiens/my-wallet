@@ -1,0 +1,128 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi cartera",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "GastoIntent",
+          "slots": [
+            {
+              "name": "CANTIDAD",
+              "type": "AMAZON.NUMBER"
+            },
+            {
+              "name": "DESCRIPCION",
+              "type": "AMAZON.Person"
+            },
+            {
+              "name": "FECHA",
+              "type": "AMAZON.DATE"
+            }
+          ],
+          "samples": [
+            "registra un gasto de {CANTIDAD} pesos de {DESCRIPCION}",
+            "{FECHA} utilicé {CANTIDAD} pesos en {DESCRIPCION}",
+            "{FECHA} usé {CANTIDAD} pesos en {DESCRIPCION}",
+            "{DESCRIPCION} utilicé {CANTIDAD} pesos",
+            "{DESCRIPCION} usé {CANTIDAD} pesos",
+            "{DESCRIPCION} gasté {CANTIDAD} pesos",
+            "gasté {CANTIDAD} pesos en {DESCRIPCION}",
+            "{FECHA} gasté {CANTIDAD} pesos en {DESCRIPCION}"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "CARTERA_TIPO_GASTO",
+          "values": [
+            {
+              "name": {
+                "value": "Entretenimiento"
+              }
+            },
+            {
+              "id": "Comida",
+              "name": {
+                "value": "Comida",
+                "synonyms": [
+                  "tacos",
+                  "Hamburguesa",
+                  "Tacos",
+                  "Uber Eats",
+                  "Rappi"
+                ]
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "dialog": {
+      "intents": [
+        {
+          "name": "GastoIntent",
+          "delegationStrategy": "ALWAYS",
+          "confirmationRequired": true,
+          "prompts": {
+            "confirmation": "Confirm.Intent.733559449646"
+          },
+          "slots": [
+            {
+              "name": "CANTIDAD",
+              "type": "AMAZON.NUMBER",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "DESCRIPCION",
+              "type": "AMAZON.Person",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            },
+            {
+              "name": "FECHA",
+              "type": "AMAZON.DATE",
+              "confirmationRequired": false,
+              "elicitationRequired": false,
+              "prompts": {}
+            }
+          ]
+        }
+      ],
+      "delegationStrategy": "ALWAYS"
+    },
+    "prompts": [
+      {
+        "id": "Confirm.Intent.733559449646",
+        "variations": [
+          {
+            "type": "PlainText",
+            "value": "Estas seguro que deseas registrar un gasto de {CANTIDAD} en {DESCRIPCION} ?"
+          },
+          {
+            "type": "PlainText",
+            "value": "Añadir gasto de {CANTIDAD} pesos?"
+          }
+        ]
+      }
+    ]
+  }
+}

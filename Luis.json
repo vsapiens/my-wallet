@@ -1,0 +1,262 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "mi cartera",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "Cómo funciona mi cartera",
+            "Qué se puede hacer con mi cartera",
+            "Qué puedo hacer con mi cartera",
+            "No sé qué puedo hacer con mi cartera",
+            "No sé qué hacer con mi cartera",
+            "Qué se puede hacer en mi cartera",
+            "Qué puedo hacer en mi cartera",
+            "No sé qué puedo hacer en mi cartera",
+            "No sé qué hacer en mi cartera",
+            "Cómo funciona",
+            "Cómo funciona esto",
+            "Qué se puede hacer",
+            "Qué puedo hacer",
+            "No sé qué puedo hacer",
+            "No sé qué hacer",
+            "No sé qué decir",
+            "Dime cómo funciona mi cartera",
+            "Dime qué se puede hacer con mi cartera",
+            "Dime qué puedo hacer con mi cartera",
+            "Dime qué se puede hacer en mi cartera",
+            "Dime qué puedo hacer en mi cartera",
+            "Dime cómo funciona",
+            "Dime cómo funciona esto",
+            "Dime qué se puede hacer",
+            "Dime qué puedo hacer",
+            "Explícame cómo funciona mi cartera",
+            "Explícame qué se puede hacer con mi cartera",
+            "Explícame qué puedo hacer con mi cartera",
+            "Explícame qué se puede hacer en mi cartera",
+            "Explícame qué puedo hacer en mi cartera",
+            "Explícame cómo funciona",
+            "Explícame cómo funciona esto",
+            "Explícame qué se puede hacer",
+            "Explícame qué puedo hacer",
+            "Enséñame cómo funciona mi cartera",
+            "Enséñame qué se puede hacer con mi cartera",
+            "Enséñame qué puedo hacer con mi cartera",
+            "Enséñame qué se puede hacer en mi cartera",
+            "Enséñame qué puedo hacer en mi cartera",
+            "Enséñame cómo funciona",
+            "Enséñame cómo funciona esto",
+            "Enséñame qué se puede hacer",
+            "Enséñame qué puedo hacer",
+            "Muéstrame cómo funciona mi cartera",
+            "Muéstrame qué se puede hacer con mi cartera",
+            "Muéstrame qué puedo hacer con mi cartera",
+            "Muéstrame qué se puede hacer en mi cartera",
+            "Muéstrame qué puedo hacer en mi cartera",
+            "Muéstrame cómo funciona",
+            "Muéstrame cómo funciona esto",
+            "Muéstrame qué se puede hacer",
+            "Muéstrame qué puedo hacer",
+            "Requiero tu ayuda con mi cartera",
+            "Requiero ayuda con mi cartera",
+            "Requiero tu ayuda",
+            "Requiero ayuda",
+            "Necesito tu ayuda con mi cartera",
+            "Necesito ayuda con mi cartera",
+            "Necesito tu ayuda",
+            "Necesito ayuda",
+            "Enséñame a usar mi cartera",
+            "Explícame a usar mi cartera",
+            "Ayúdame con mi cartera",
+            "Enséñame",
+            "Explícame",
+            "Ayúdame",
+            "Ayuda"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "HelloWorldIntent",
+          "slots": [],
+          "samples": [
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
+          ]
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "HelpIngresosIntent",
+          "slots": [
+            {
+              "name": "DIME",
+              "type": "CARTERA_DIME"
+            },
+            {
+              "name": "INGRESOS",
+              "type": "CARTERA_INGRESO"
+            }
+          ],
+          "samples": [
+            "{DIME} qué puedo ingresar",
+            "Ayuda ingresos",
+            "Qué hago con los {INGRESOS}",
+            "Qué puedo hacer en los {INGRESOS}",
+            "Qué puedo hacer con los {INGRESOS}",
+            "Qué hacer en los {INGRESOS}",
+            "Qué hacer con los {INGRESOS}",
+            "Apóyame con los {INGRESOS}",
+            "Apóyame en los {INGRESOS}",
+            "Necesito ayuda en los {INGRESOS}",
+            "Necesito ayuda con los {INGRESOS}",
+            "Ayúdame en los {INGRESOS}",
+            "Ayúdame con los {INGRESOS}",
+            "Ayuda en los {INGRESOS}",
+            "Ayuda con los {INGRESOS}",
+            "{DIME} cómo ingreso datos",
+            "{DIME} cómo ingreso dinero",
+            "{DIME} cómo deposito dinero",
+            "{DIME} cómo deposito",
+            "{DIME} cómo ingresar datos",
+            "{DIME} cómo ingresar dinero",
+            "{DIME} cómo depositar dinero",
+            "{DIME} cómo depositar",
+            "{DIME} cómo uso los ingresos",
+            "{DIME} cómo utilizo los ingresos"
+          ]
+        },
+        {
+          "name": "HelpGastosIntent",
+          "slots": [
+            {
+              "name": "EGRESOS",
+              "type": "CARTERA_EGRESOS"
+            },
+            {
+              "name": "DIME",
+              "type": "CARTERA_DIME"
+            }
+          ],
+          "samples": [
+            "Dime qué hacer con mi préstamo",
+            "Cómo añado {EGRESOS}",
+            "Dónde agrego mis {EGRESOS}",
+            "Qué puedo hacer con los {EGRESOS}",
+            "Qué hago con mis {EGRESOS}",
+            "Ayuda {EGRESOS}",
+            "{DIME} cómo añado {EGRESOS}",
+            "{DIME} dónde agrego mis {EGRESOS}",
+            "{DIME} qué puedo hacer con los {EGRESOS}",
+            "{DIME} qué hago con mis {EGRESOS}",
+            "Ayúdame con los {EGRESOS}"
+          ]
+        },
+        {
+          "name": "HelpStatusIntent",
+          "slots": [
+            {
+              "name": "DIME",
+              "type": "CARTERA_DIME"
+            },
+            {
+              "name": "AGREGUE",
+              "type": "CARTERA_AGREGUE"
+            }
+          ],
+          "samples": [
+            "cómo adquirir préstamos",
+            "cómo obtener gastos",
+            "{DIME} qué hago con el dinero que {AGREGUE}",
+            "{DIME} qué hago con el dinero que añadí",
+            "Dónde puedo hacer las consultas",
+            "{DIME} qué puedo saber",
+            "{DIME} qué puedo hacer con la información",
+            "{DIME} qué puedo consultar",
+            "{DIME} qué tipo de información puedo consultar",
+            "{DIME} qué información está disponible",
+            "{DIME} qué información puedo accesar",
+            "Qué información puedo accesar",
+            "Dónde consulto la información",
+            "Dónde puedo consultar la información",
+            "Qué puedo hacer con las consultas",
+            "Qué tipo de información está disponible",
+            "Qué tipo de consultas puedo hacer",
+            "Qué información está disponible",
+            "Qué tipo de información puedo consultar",
+            "Qué puedo consultar"
+          ]
+        }
+      ],
+      "types": [
+        {
+          "name": "CARTERA_EGRESOS",
+          "values": [
+            {
+              "name": {
+                "value": "gastos",
+                "synonyms": ["egresos", "préstamos"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "CARTERA_DIME",
+          "values": [
+            {
+              "name": {
+                "value": "Dime ",
+                "synonyms": [
+                  "Obtén",
+                  "Menciona",
+                  "Enseña",
+                  "Explica",
+                  "Muestra",
+                  "Muéstrame",
+                  "Explícame",
+                  "Enséñame"
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "name": "CARTERA_INGRESO",
+          "values": [
+            {
+              "name": {
+                "value": "ingresos",
+                "synonyms": ["depósitos"]
+              }
+            }
+          ]
+        },
+        {
+          "name": "CARTERA_AGREGUE",
+          "values": [
+            {
+              "name": {
+                "value": "agregué",
+                "synonyms": ["sumé", "inserté", "ingresé", "añadí"]
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

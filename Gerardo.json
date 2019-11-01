@@ -1,0 +1,1028 @@
+{
+    "interactionModel": {
+        "languageModel": {
+            "invocationName": "mi cartera",
+            "intents": [
+                {
+                    "name": "AMAZON.CancelIntent",
+                    "samples": []
+                },
+                {
+                    "name": "AMAZON.HelpIntent",
+                    "samples": [
+                        "Cómo funciona mi cartera",
+                        "Qué se puede hacer con mi cartera",
+                        "Qué puedo hacer con mi cartera",
+                        "No sé qué puedo hacer con mi cartera",
+                        "No sé qué hacer con mi cartera",
+                        "Qué se puede hacer en mi cartera",
+                        "Qué puedo hacer en mi cartera",
+                        "No sé qué puedo hacer en mi cartera",
+                        "No sé qué hacer en mi cartera",
+                        "Cómo funciona",
+                        "Cómo funciona esto",
+                        "Qué se puede hacer",
+                        "Qué puedo hacer",
+                        "No sé qué puedo hacer",
+                        "No sé qué hacer",
+                        "No sé qué decir",
+                        "Dime cómo funciona mi cartera",
+                        "Dime qué se puede hacer con mi cartera",
+                        "Dime qué puedo hacer con mi cartera",
+                        "Dime qué se puede hacer en mi cartera",
+                        "Dime qué puedo hacer en mi cartera",
+                        "Dime cómo funciona",
+                        "Dime cómo funciona esto",
+                        "Dime qué se puede hacer",
+                        "Dime qué puedo hacer",
+                        "Explícame cómo funciona mi cartera",
+                        "Explícame qué se puede hacer con mi cartera",
+                        "Explícame qué puedo hacer con mi cartera",
+                        "Explícame qué se puede hacer en mi cartera",
+                        "Explícame qué puedo hacer en mi cartera",
+                        "Explícame cómo funciona",
+                        "Explícame cómo funciona esto",
+                        "Explícame qué se puede hacer",
+                        "Explícame qué puedo hacer",
+                        "Enséñame cómo funciona mi cartera",
+                        "Enséñame qué se puede hacer con mi cartera",
+                        "Enséñame qué puedo hacer con mi cartera",
+                        "Enséñame qué se puede hacer en mi cartera",
+                        "Enséñame qué puedo hacer en mi cartera",
+                        "Enséñame cómo funciona",
+                        "Enséñame cómo funciona esto",
+                        "Enséñame qué se puede hacer",
+                        "Enséñame qué puedo hacer",
+                        "Muéstrame cómo funciona mi cartera",
+                        "Muéstrame qué se puede hacer con mi cartera",
+                        "Muéstrame qué puedo hacer con mi cartera",
+                        "Muéstrame qué se puede hacer en mi cartera",
+                        "Muéstrame qué puedo hacer en mi cartera",
+                        "Muéstrame cómo funciona",
+                        "Muéstrame cómo funciona esto",
+                        "Muéstrame qué se puede hacer",
+                        "Muéstrame qué puedo hacer",
+                        "Requiero tu ayuda con mi cartera",
+                        "Requiero ayuda con mi cartera",
+                        "Requiero tu ayuda",
+                        "Requiero ayuda",
+                        "Necesito tu ayuda con mi cartera",
+                        "Necesito ayuda con mi cartera",
+                        "Necesito tu ayuda",
+                        "Necesito ayuda",
+                        "Enséñame a usar mi cartera",
+                        "Explícame a usar mi cartera",
+                        "Ayúdame con mi cartera",
+                        "Enséñame",
+                        "Explícame",
+                        "Ayúdame",
+                        "Ayuda"
+                    ]
+                },
+                {
+                    "name": "AMAZON.StopIntent",
+                    "samples": []
+                },
+                {
+                    "name": "HelloWorldIntent",
+                    "slots": [],
+                    "samples": [
+                        "hello",
+                        "how are you",
+                        "say hi world",
+                        "say hi",
+                        "hi",
+                        "say hello world",
+                        "say hello"
+                    ]
+                },
+                {
+                    "name": "AMAZON.NavigateHomeIntent",
+                    "samples": []
+                },
+                {
+                    "name": "GetSaldoIntent",
+                    "slots": [],
+                    "samples": [
+                        "cuál es mi saldo",
+                        "qué saldo tengo",
+                        "da mi saldo",
+                        "dame mi saldo",
+                        "di mi saldo",
+                        "dime mi saldo",
+                        "obtén mi saldo",
+                        "obtenme mi saldo",
+                        "busca mi saldo",
+                        "búscame mi saldo",
+                        "quiero mi saldo",
+                        "quiero saber mi saldo",
+                        "mi saldo",
+                        "el saldo"
+                    ]
+                },
+                {
+                    "name": "GetIngresosIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuáles son mis ingresos",
+                        "cuánto tengo de ingresos",
+                        "da mis ingresos",
+                        "dame mis ingresos",
+                        "di mis ingresos",
+                        "dime mis ingresos",
+                        "obtén mis ingresos",
+                        "obtenme mis ingresos",
+                        "busca mis ingresos",
+                        "búscame mis ingresos",
+                        "quiero mis ingresos",
+                        "quiero saber mis ingresos",
+                        "mis ingresos",
+                        "los ingresos",
+                        "cuáles son mis ingresos {TIEMPO}",
+                        "cuánto tengo de ingresos {TIEMPO}",
+                        "da mis ingresos {TIEMPO}",
+                        "dame mis ingresos {TIEMPO}",
+                        "di mis ingresos {TIEMPO}",
+                        "dime mis ingresos {TIEMPO}",
+                        "obtén mis ingresos {TIEMPO}",
+                        "obténme mis ingresos {TIEMPO}",
+                        "busca mis ingresos {TIEMPO}",
+                        "búscame mis ingresos {TIEMPO}",
+                        "quiero mis ingresos {TIEMPO}",
+                        "quiero saber mis ingresos {TIEMPO}",
+                        "mis ingresos {TIEMPO}",
+                        "los ingresos {TIEMPO}",
+                        "ingresos"
+                    ]
+                },
+                {
+                    "name": "GetGastosIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuáles son mis gastos {TIEMPO}",
+                        "cuánto tengo de gastos {TIEMPO}",
+                        "cuánto he gastado {TIEMPO}",
+                        "da mis gastos {TIEMPO}",
+                        "dame mis gastos {TIEMPO}",
+                        "di mis gastos {TIEMPO}",
+                        "dime mis gastos {TIEMPO}",
+                        "obtén mis gastos {TIEMPO}",
+                        "obtenme mis gastos {TIEMPO}",
+                        "busca mis gastos {TIEMPO}",
+                        "búscame mis gastos {TIEMPO}",
+                        "quiero mis gastos {TIEMPO}",
+                        "quiero saber mis gastos",
+                        "mis gastos {TIEMPO}",
+                        "los gastos {TIEMPO}",
+                        "gastos {TIEMPO}",
+                        "he gastado {TIEMPO}",
+                        "mis gastos"
+                    ]
+                },
+                {
+                    "name": "GetPrestamosSolicitadosIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuántos préstamos he solicitado en {TIEMPO}",
+                        "cuántos préstamos solicitados tengo en {TIEMPO}",
+                        "número de préstamos solicitados en {TIEMPO}",
+                        "cuánto tengo de préstamos pedidos {TIEMPO}",
+                        "cuánto he pedido prestado {TIEMPO}",
+                        "da préstamos solicitados {TIEMPO}",
+                        "dame mis préstamos solicitados {TIEMPO}",
+                        "di mis préstamos solicitados {TIEMPO}",
+                        "dime mis préstamos solicitados {TIEMPO}",
+                        "obtén mis préstamos solicitados {TIEMPO}",
+                        "obtenme mis préstamos solicitados {TIEMPO}",
+                        "busca mis préstamos solicitados {TIEMPO}",
+                        "búscame mis préstamos solicitados {TIEMPO}",
+                        "quiero mis préstamos solicitados {TIEMPO}",
+                        "préstamos solicitados en {TIEMPO}",
+                        "préstamos que he pedido en {TIEMPO}",
+                        "préstamos solicitados en {TIEMPO}",
+                        "préstamos pedidos {TIEMPO}"
+                    ]
+                },
+                {
+                    "name": "GetPrestamosOtorgadosIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuántos préstamos he concedido en {TIEMPO}",
+                        "cuántos préstamos otorgados tengo en {TIEMPO}",
+                        "número de préstamos concedidos en {TIEMPO}",
+                        "cuánto tengo de préstamos otorgados {TIEMPO}",
+                        "cuánto he pedido prestado {TIEMPO}",
+                        "da préstamos concedidos {TIEMPO}",
+                        "dame mis préstamos concedidos {TIEMPO}",
+                        "di mis préstamos concedidos {TIEMPO}",
+                        "dime mis préstamos dados {TIEMPO}",
+                        "obtén mis préstamos concedidos {TIEMPO}",
+                        "obtenme mis préstamos otorgados {TIEMPO}",
+                        "busca mis préstamos otorgados {TIEMPO}",
+                        "búscame mis préstamos concedidos {TIEMPO}",
+                        "quiero mis préstamos otorgados {TIEMPO}",
+                        "quiero saber mis préstamos concedidos {TIEMPO}",
+                        "mis préstamos dados en {TIEMPO}",
+                        "préstamos otorgados en {TIEMPO}",
+                        "préstamos concedidos en {TIEMPO}",
+                        "préstamos facilitados {TIEMPO}"
+                    ]
+                },
+                {
+                    "name": "GetPrestamosIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuál es mi número de préstamos en {TIEMPO}",
+                        "cuántos préstamos tengo {TIEMPO}",
+                        "qué préstamos hay en {TIEMPO}",
+                        "da mis préstamos de {TIEMPO}",
+                        "dame mis préstamos {TIEMPO}",
+                        "di mis préstamos de {TIEMPO}",
+                        "dime mis préstamos del {TIEMPO}",
+                        "obtén mis préstamos en {TIEMPO}",
+                        "obtenme mis préstamos del {TIEMPO}",
+                        "busca mis préstamos de {TIEMPO}",
+                        "búscame mis préstamos de {TIEMPO}",
+                        "quiero mis préstamos de {TIEMPO}",
+                        "quiero saber mis préstamos en {TIEMPO}",
+                        "mis préstamos en {TIEMPO}",
+                        "los préstamos {TIEMPO}"
+                    ]
+                },
+                {
+                    "name": "GetBalanceIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE"
+                        }
+                    ],
+                    "samples": [
+                        "cuál es mi balance {TIEMPO}",
+                        "da el balance de {TIEMPO}",
+                        "dame mi balance {TIEMPO}",
+                        "di mi balande durante {TIEMPO}",
+                        "dime el balance {TIEMPO}",
+                        "obtén el balance de {TIEMPO}",
+                        "obtenme un balance de {TIEMPO}",
+                        "busca mi balance en {TIEMPO}",
+                        "búscame mi balance de {TIEMPO}",
+                        "quiero mi balance {TIEMPO}",
+                        "quiero saber mi balance {TIEMPO}",
+                        "el balance {TIEMPO}"
+                    ]
+                },
+                {
+                    "name": "SobrevivoIntent",
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE",
+                            "samples": [
+                                "busca si alcanzo a librarla {TIEMPO}",
+                                "necesito saber si la libro en {TIEMPO}",
+                                "quiero saber si sobrevivo {TIEMPO}",
+                                "dime si la libro en {TIEMPO}",
+                                "dime si sobrevivo en {TIEMPO}",
+                                "di si la libro en {TIEMPO}"
+                            ]
+                        }
+                    ],
+                    "samples": [
+                        "di si la libro {TIEMPO}",
+                        "dime si sobrevivo {TIEMPO}",
+                        "quiero saber si sobrevivo {TIEMPO}",
+                        "necesito saber si la libro en {TIEMPO}",
+                        "busca si alcanzo a librar {TIEMPO}",
+                        "la libro {TIEMPO}",
+                        "sobrevivo {TIEMPO}"
+                    ]
+                },
+                {
+                    "name": "UltimoGastoIntent",
+                    "slots": [
+                        {
+                            "name": "TIPO_GASTO",
+                            "type": "CARTERA_TIPO_GASTO"
+                        }
+                    ],
+                    "samples": [
+                        "cuál es el último gasto en {TIPO_GASTO}",
+                        "cuál fue mi último gasto",
+                        "di el último gasto en {TIPO_GASTO}",
+                        "dime mi último gasto en {TIPO_GASTO}",
+                        "da el último gasto en {TIPO_GASTO}",
+                        "dame el último gasto en {TIPO_GASTO}",
+                        "obtén el último gasto en {TIPO_GASTO}",
+                        "obtenme el último gasto en {TIPO_GASTO}",
+                        "busca el último gasto en {TIPO_GASTO}",
+                        "búscame el último gasto en {TIPO_GASTO}",
+                        "quiero mi último gasto en {TIPO_GASTO}",
+                        "quiero saber el último gasto {TIPO_GASTO}",
+                        "mi último gasto {TIPO_GASTO}",
+                        "último gasto"
+                    ]
+                },
+                {
+                    "name": "UltimoIngresoIntent",
+                    "slots": [
+                        {
+                            "name": "TIPO_INGRESO",
+                            "type": "CARTERA_TIPO_INGRESO"
+                        }
+                    ],
+                    "samples": [
+                        "cuál es el último ingreso en {TIPO_INGRESO}",
+                        "cuál fue mi último ingreso",
+                        "di el último ingreso en {TIPO_INGRESO}",
+                        "dime mi último ingreso en {TIPO_INGRESO}",
+                        "da el último ingreso en {TIPO_INGRESO}",
+                        "dame el último ingreso en {TIPO_INGRESO}",
+                        "obtén el último ingreso en {TIPO_INGRESO}",
+                        "obtenme el último ingreso en {TIPO_INGRESO}",
+                        "busca el último ingreso en {TIPO_INGRESO}",
+                        "búscame el último ingreso en {TIPO_INGRESO}",
+                        "quiero mi último ingreso en {TIPO_INGRESO}",
+                        "quiero saber el último ingreso {TIPO_INGRESO}",
+                        "mi último ingreso {TIPO_INGRESO}",
+                        "último ingreso"
+                    ]
+                },
+                {
+                    "name": "GetFaltanteIntent",
+                    "slots": [
+                        {
+                            "name": "CANTIDAD",
+                            "type": "AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples": [
+                        "cuánto me falta para lograr {CANTIDAD} pesos",
+                        "cuánto me resta para alcanzar {CANTIDAD}",
+                        "di cuánto me falta para tener {CANTIDAD}",
+                        "dime cuánto necesito para alcanzar {CANTIDAD} pesos",
+                        "da la cantidad que me falta para tener {CANTIDAD} pesos",
+                        "dame el faltante para tener {CANTIDAD}",
+                        "obtén el faltante para alcanzar {CANTIDAD} pesos",
+                        "obtenme el restante para lograr {CANTIDAD}",
+                        "busca cuánto me falta para tener {CANTIDAD}",
+                        "búscame cuánto me falta para alcanzar {CANTIDAD}",
+                        "quiero saber cuánto necesito para acumular {CANTIDAD}",
+                        "quiero el faltante para tener {CANTIDAD}",
+                        "faltante para tener {CANTIDAD}"
+                    ]
+                },
+                {
+                    "name": "IngresoIntent",
+                    "slots": [
+                        {
+                            "name": "Cantidad",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "Tipo",
+                            "type": "AMAZON.Person"
+                        },
+                        {
+                            "name": "FechaInput",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "Descripcion",
+                            "type": "AMAZON.Person"
+                        },
+                        {
+                            "name": "Moneda",
+                            "type": "CARTERA_MONEDA"
+                        },
+                        {
+                            "name": "Agregar",
+                            "type": "CARTERA_ANADIR"
+                        }
+                    ],
+                    "samples": [
+                        "{Agregar} {Cantidad}",
+                        "{Agregar} {Cantidad} {Moneda}",
+                        "{FechaInput} {Descripcion} me {Tipo} {Cantidad}",
+                        "{FechaInput} {Descripcion} me {Tipo} {Cantidad} {Moneda}",
+                        "Meter {Cantidad}",
+                        "Meter {Cantidad} {Moneda}",
+                        "Mete {Cantidad} {Moneda}",
+                        "Mete {Cantidad}",
+                        "Registra {Cantidad} {Moneda}",
+                        "Registra {Cantidad}",
+                        "Registrar {Cantidad} {Moneda}",
+                        "Registrar {Cantidad}",
+                        "Sueldo {Cantidad} {Moneda}",
+                        "Sueldo {Cantidad}",
+                        "Me {Tipo} {Cantidad} {Moneda} {FechaInput}",
+                        "Me {Tipo} {Cantidad}",
+                        "Me {Tipo} {Cantidad} {Moneda}",
+                        "Depositar {Cantidad} porfavor",
+                        "Depositar {Cantidad} {Moneda} porfavor",
+                        "Depositar {Cantidad}",
+                        "Depositar {Cantidad} {Moneda}",
+                        "Agregamé {Cantidad} {Moneda} porfavor",
+                        "Agregamé {Cantidad} porfavor",
+                        "Agregar {Cantidad} {Moneda} porfavor",
+                        "Agregar {Cantidad} porfavor",
+                        "Agregamé {Cantidad} {Moneda}",
+                        "Agregamé {Cantidad}",
+                        "Agregar {Cantidad} {Moneda}",
+                        "Agregar {Cantidad}",
+                        "{FechaInput} mi {Descripcion} me {Tipo} {Cantidad} {Moneda}",
+                        "{FechaInput} mi {Descripcion} me {Tipo} {Cantidad}",
+                        "{Descripcion} me {Tipo} {Cantidad}  {FechaInput} ",
+                        "{Descripcion} me {Tipo} {Cantidad} {Moneda} {FechaInput} ",
+                        "{Descripcion} me {Tipo} {FechaInput} {Cantidad} {Moneda}"
+                    ]
+                },
+                {
+                    "name": "GastoIntent",
+                    "slots": [
+                        {
+                            "name": "CANTIDAD",
+                            "type": "AMAZON.NUMBER"
+                        },
+                        {
+                            "name": "DESCRIPCION",
+                            "type": "AMAZON.Person"
+                        },
+                        {
+                            "name": "FECHA",
+                            "type": "AMAZON.DATE"
+                        },
+                        {
+                            "name": "MONEDA",
+                            "type": "CARTERA_MONEDA"
+                        }
+                    ],
+                    "samples": [
+                        "registra un gasto de {CANTIDAD} {MONEDA} de {DESCRIPCION}",
+                        "{FECHA} utilicé {CANTIDAD} {MONEDA} en {DESCRIPCION}",
+                        "{FECHA} usé {CANTIDAD} {MONEDA} en {DESCRIPCION}",
+                        "{DESCRIPCION} utilicé {CANTIDAD} {MONEDA}",
+                        "{DESCRIPCION} usé {CANTIDAD} {MONEDA}",
+                        "{DESCRIPCION} gasté {CANTIDAD} pesos",
+                        "gasté {CANTIDAD} pesos en {DESCRIPCION}",
+                        "{FECHA} gasté {CANTIDAD} pesos en {DESCRIPCION}"
+                    ]
+                },
+                {
+                    "name": "HelpIngresosIntent",
+                    "slots": [
+                        {
+                            "name": "DIME",
+                            "type": "CARTERA_DIME"
+                        },
+                        {
+                            "name": "INGRESOS",
+                            "type": "CARTERA_INGRESO"
+                        }
+                    ],
+                    "samples": [
+                        "{DIME} qué puedo ingresar",
+                        "Ayuda ingresos",
+                        "Qué hago con los {INGRESOS}",
+                        "Qué puedo hacer en los {INGRESOS}",
+                        "Qué puedo hacer con los {INGRESOS}",
+                        "Qué hacer en los {INGRESOS}",
+                        "Qué hacer con los {INGRESOS}",
+                        "Apóyame con los {INGRESOS}",
+                        "Apóyame en los {INGRESOS}",
+                        "Necesito ayuda en los {INGRESOS}",
+                        "Necesito ayuda con los {INGRESOS}",
+                        "Ayúdame en los {INGRESOS}",
+                        "Ayúdame con los {INGRESOS}",
+                        "Ayuda en los {INGRESOS}",
+                        "Ayuda con los {INGRESOS}",
+                        "{DIME} cómo ingreso datos",
+                        "{DIME} cómo ingreso dinero",
+                        "{DIME} cómo deposito dinero",
+                        "{DIME} cómo deposito",
+                        "{DIME} cómo ingresar datos",
+                        "{DIME} cómo ingresar dinero",
+                        "{DIME} cómo depositar dinero",
+                        "{DIME} cómo depositar",
+                        "{DIME} cómo uso los ingresos",
+                        "{DIME} cómo utilizo los ingresos"
+                    ]
+                },
+                {
+                    "name": "HelpGastosIntent",
+                    "slots": [
+                        {
+                            "name": "EGRESOS",
+                            "type": "CARTERA_EGRESOS"
+                        },
+                        {
+                            "name": "DIME",
+                            "type": "CARTERA_DIME"
+                        }
+                    ],
+                    "samples": [
+                        "Dime qué hacer con mi préstamo",
+                        "Cómo añado {EGRESOS}",
+                        "Dónde agrego mis {EGRESOS}",
+                        "Qué puedo hacer con los {EGRESOS}",
+                        "Qué hago con mis {EGRESOS}",
+                        "Ayuda {EGRESOS}",
+                        "{DIME} cómo añado {EGRESOS}",
+                        "{DIME} dónde agrego mis {EGRESOS}",
+                        "{DIME} qué puedo hacer con los {EGRESOS}",
+                        "{DIME} qué hago con mis {EGRESOS}",
+                        "Ayúdame con los {EGRESOS}"
+                    ]
+                },
+                {
+                    "name": "HelpStatusIntent",
+                    "slots": [
+                        {
+                            "name": "DIME",
+                            "type": "CARTERA_DIME"
+                        },
+                        {
+                            "name": "AGREGUE",
+                            "type": "CARTERA_AGREGUE"
+                        }
+                    ],
+                    "samples": [
+                        "cómo adquirir préstamos",
+                        "cómo obtener gastos",
+                        "{DIME} qué hago con el dinero que {AGREGUE}",
+                        "{DIME} qué hago con el dinero que añadí",
+                        "Dónde puedo hacer las consultas",
+                        "{DIME} qué puedo saber",
+                        "{DIME} qué puedo hacer con la información",
+                        "{DIME} qué puedo consultar",
+                        "{DIME} qué tipo de información puedo consultar",
+                        "{DIME} qué información está disponible",
+                        "{DIME} qué información puedo accesar",
+                        "Qué información puedo accesar",
+                        "Dónde consulto la información",
+                        "Dónde puedo consultar la información",
+                        "Qué puedo hacer con las consultas",
+                        "Qué tipo de información está disponible",
+                        "Qué tipo de consultas puedo hacer",
+                        "Qué información está disponible",
+                        "Qué tipo de información puedo consultar",
+                        "Qué puedo consultar"
+                    ]
+                }
+            ],
+            "types": [
+                {
+                    "name": "CARTERA_SALDO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "saldo",
+                                "synonyms": [
+                                    "ahorros",
+                                    "billetes",
+                                    "baros",
+                                    "dineros",
+                                    "ahorro",
+                                    "pasta",
+                                    "capital",
+                                    "oro",
+                                    "plata",
+                                    "feria",
+                                    "billete",
+                                    "baro",
+                                    "lana",
+                                    "dinero"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_INGRESO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "he ganado",
+                                "synonyms": [
+                                    "ingresé",
+                                    "metí",
+                                    "registré",
+                                    "agregué",
+                                    "metiste",
+                                    "ingresaste",
+                                    "registraste",
+                                    "registré",
+                                    "gané",
+                                    "has registrado",
+                                    "has metido",
+                                    "has agregado",
+                                    "he agregado",
+                                    "he obtenido",
+                                    "he generado",
+                                    "he metido",
+                                    "he ingresado"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "ingreso",
+                                "synonyms": [
+                                    "ingresos",
+                                    "ganancia",
+                                    "ganancias",
+                                    "frutos",
+                                    "utilidad",
+                                    "utilidades",
+                                    "ingresos"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_GASTO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gasté",
+                                "synonyms": [
+                                    "utilicé",
+                                    "he usado",
+                                    "has restado",
+                                    "restaste",
+                                    "has quitado",
+                                    "quitaste",
+                                    "egresé",
+                                    "he gastado",
+                                    "he perdido",
+                                    "perdí"
+                                ]
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "gastos",
+                                "synonyms": [
+                                    "usar",
+                                    "egresos",
+                                    "egreso",
+                                    "pérdidas",
+                                    "pérdida",
+                                    "gasto"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_TIPO_GASTO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Otros"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Vivienda"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Transporte"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Salud"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Ropa"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Pagos"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Entretenimiento"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Educación"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Alimentación"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_TIPO_INGRESO",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Otro"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Sueldo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Regalo"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Premio"
+                            }
+                        },
+                        {
+                            "name": {
+                                "value": "Inversion"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_ANADIR",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Añadir",
+                                "synonyms": [
+                                    "Insertale",
+                                    "Ingresale",
+                                    "Metele",
+                                    "Añadele",
+                                    "Agregale",
+                                    "Sumale",
+                                    "Ponle",
+                                    "Sumar",
+                                    "Meter",
+                                    "Poner",
+                                    "Añade",
+                                    "Ingresar",
+                                    "Insertar",
+                                    "Agregar"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_EGRESOS",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "gastos",
+                                "synonyms": [
+                                    "egresos",
+                                    "préstamos"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_DIME",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "Dime ",
+                                "synonyms": [
+                                    "Obtén",
+                                    "Menciona",
+                                    "Enseña",
+                                    "Explica",
+                                    "Muestra",
+                                    "Muéstrame",
+                                    "Explícame",
+                                    "Enséñame"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_AGREGUE",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "agregué",
+                                "synonyms": [
+                                    "sumé",
+                                    "inserté",
+                                    "ingresé",
+                                    "añadí"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CARTERA_MONEDA",
+                    "values": [
+                        {
+                            "name": {
+                                "value": "pesos",
+                                "synonyms": [
+                                    "peso",
+                                    "varo",
+                                    "cash",
+                                    "money",
+                                    "dinero",
+                                    "bolas",
+                                    "baro"
+                                ]
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "dialog": {
+            "intents": [
+                {
+                    "name": "SobrevivoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "TIEMPO",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": true,
+                            "prompts": {
+                                "elicitation": "Elicit.Slot.1233064993353.573899323399"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "IngresoIntent",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "Cantidad",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "Tipo",
+                            "type": "AMAZON.Person",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FechaInput",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "Descripcion",
+                            "type": "AMAZON.Person",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "Moneda",
+                            "type": "CARTERA_MONEDA",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "Agregar",
+                            "type": "CARTERA_ANADIR",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                },
+                {
+                    "name": "GastoIntent",
+                    "delegationStrategy": "ALWAYS",
+                    "confirmationRequired": false,
+                    "prompts": {},
+                    "slots": [
+                        {
+                            "name": "CANTIDAD",
+                            "type": "AMAZON.NUMBER",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "DESCRIPCION",
+                            "type": "AMAZON.Person",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "FECHA",
+                            "type": "AMAZON.DATE",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        },
+                        {
+                            "name": "MONEDA",
+                            "type": "CARTERA_MONEDA",
+                            "confirmationRequired": false,
+                            "elicitationRequired": false,
+                            "prompts": {}
+                        }
+                    ]
+                }
+            ],
+            "delegationStrategy": "ALWAYS"
+        },
+        "prompts": [
+            {
+                "id": "Elicit.Slot.1233064993353.573899323399",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Sé más claro con el rango de tiempo que deseas evaluar"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Por favor sé más claro"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.659075743101",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Seguro?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Confirmas lo que me dijiste puñetas con {Cantidad} pesos"
+                    }
+                ]
+            },
+            {
+                "id": "Confirm.Intent.733559449646",
+                "variations": [
+                    {
+                        "type": "PlainText",
+                        "value": "Estas seguro que deseas registrar un gasto de {CANTIDAD} en {DESCRIPCION} ?"
+                    },
+                    {
+                        "type": "PlainText",
+                        "value": "Añadir gasto de {CANTIDAD} pesos?"
+                    }
+                ]
+            }
+        ]
+    }
+}
