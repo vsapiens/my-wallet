@@ -17,7 +17,7 @@
   },
   "homepage": "https://github.com/vsapiens/my-wallet#readme",
   "dependencies": {
-    "google-spreadsheet": "^2.0.8",
+    "google-spreadsheet": "^2.0.9",
     "googleapis": "^39.2.0",
     "moment": "^2.24.0",
     "request": "^2.88.0",
