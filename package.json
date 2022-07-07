@@ -19,7 +19,7 @@
   "dependencies": {
     "google-spreadsheet": "^2.0.8",
     "googleapis": "^39.2.0",
-    "moment": "^2.24.0",
+    "moment": "^2.29.4",
     "request": "^2.88.0",
     "underscore": "^1.9.1"
   }
